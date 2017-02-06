@@ -15,96 +15,14 @@
                 <li><a href="experience.html">Experience</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="academics.html">Academics</a></li>
-                <li><a class="active" href="contact.php">Contact</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
 	
 	<!-- main content of the page -->
     <div id="main">
-        <div class="section" id="csection">
-            <h1>Send me an e-mail (via ejc233@cornell.edu) by competing the form.</h1>
-
-                <!-- contact form part -->
-                <form method="post">
-                    <ul>
-                        <li>Name:</li>
-                        <input type="text" name="name" placeholder="Steve Rogers"/>
-                        <li>Email:</li>
-                        <input type="text" name="email" placeholder="catfa2011@gmail.com"/>
-                        <li>Phone:</li>
-                        <input type="text" name="phone" placeholder="616-555-1941"/>
-                        <li>Company:</li>
-                        <input type="text" name="company" placeholder="S.H.I.E.L.D."/>
-                        <br><br>
-                        <li>Message:</li>
-                        <textarea name="message" cols="80" rows="10" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/></textarea>
-                        <input id="submitbtn" style="width: 120px;height: 30px;" type="submit" name="submit" value="submit"/>
-                    </ul>
-                </form>
-
-                <!-- php section -->
-                <?php
-                    if(isset($_POST["submit"])) {
-                        // set php variables
-                        $name = isset($_POST['name']) ? $_POST['name'] : '';
-                        $email = isset($_POST['email']) ? $_POST['email'] : ''; 
-                        $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
-                        $company = isset($_POST['company']) ? $_POST['company'] : '';  
-                        $msg = isset($_POST['message']) ? $_POST['message'] : '';    
-                        $error="";
-                        // check if there are errors. Use conditional clause
-                        if (empty($name)||empty($email)||!filter_var($email, FILTER_VALIDATE_EMAIL)||empty($phone)||!preg_match("/^\d{3}-\d{3}-\d{4}$/", $phone)||empty($org)||empty($way)||empty($msg)) {
-                            if (empty($name)) {
-                                $error = "Please enter your name.</br>";
-                            }
-                            if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                                $error .= "Please enter a valid email address.</br>";
-                            }
-                            if (empty($phone) || !preg_match("/^[2-9]\d{2}-\d{3}-\d{4}$/", $phone)) {
-                                $error .= "Please enter a valid phone number.</br>";
-                            }
-                            if (empty($org)) {
-                                $error .= "Please enter your organization.</br>";
-                            }
-                            if (empty($msg)) {
-                                $error .= "Please enter your message.</br>";
-                            }
-                            if (!empty($error)) {
-                                $alert = '<div id="alert">Please fix the error(s) in your form: </br>'.$error.'</div>';
-                                echo $alert;
-                            }
-                        } 
-                        
-                        // inputs are all valid. Send me an email with contents of users' inputs and give users a confirmation message.
-                        else {
-                            // Arrays
-                            $input=array("Name"=>$name, "Email"=>$email, "Phone"=>$phone, "Company"=>$company, "Message"=>$msg);
-                            // Function and loop
-                            function displayInput($input) {
-                                $result = "";
-                                foreach ($input as $title=>$content) {
-                                    $result .= $title.": ".$content." ";
-                                }
-                                return $result;
-                            }
-                            // if mail function works successfully, send users a confirmation message.
-                            mail("ejc233@cornell.edu", "Message from my personal website", displayInput($input));
-                            if (mail("ejc233@cornell.edu", "Message from my personal website", displayInput($input))) {
-                                $alert ='<div id="alert" style="border-color: #18bc9c">Thank you! Here is a summary of your message:</br>';
-                                foreach ($input as $title=>$content) {
-                                    $alert .= $title.': '.$content.'</br>';
-                                }
-                                $alert.='</div>';
-                                echo $alert;
-                            }
-                        }
-                    }
-                ?>
-
-        </div>
-
-        <br>
+        Send me an e-mail (via ejc233@cornell.edu).
     </div>
 
     <footer>
