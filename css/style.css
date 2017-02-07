@@ -1,4 +1,4 @@
-/* general definition */
+/* general */
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     margin: 0;
@@ -15,11 +15,13 @@ a:visited {
     color:purple;
 }
 
-/* header part */
+
+/* header */
     header {
-        height: 80px;
+        height: 70px;
         background-color: #cc0000;
     }
+
 
 /* navigation */
     #nav ul {
@@ -56,11 +58,24 @@ a:visited {
         background-color: #000000;
     }
 
+    #links {
+        width: 120px;
+        float: right;
+    }
+
+    #links img{
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+
 /* main content of a page */
     #main {
         background-color:#fff;
         padding-top: 20px;
     }
+
 
 /* home */
     #intro {
@@ -85,24 +100,26 @@ a:visited {
     }
 
     #photo img {
-        height: 280px;
-        width: 280px;
-        border-radius: 40px;
+        height: 250px;
+        width: 250px;
+        border-radius: 15px;
     }
 
-/* section part */
+
+/* section */
 .section {
     margin: 0px auto;
 }
 
+
 /* experience */
     #esection {
-        width: 1000px;
+        width: 900px;
         height: 250px;
     }
 
     #experience {
-        width: 630px;
+        width: 600px;
         float: left;
         margin: 10px 0 0 20px;
     }
@@ -126,57 +143,46 @@ a:visited {
     }
 
     #company {
-        width: 250px;
+        width: 200px;
         float: right;
     }
 
     #company img{
         width: 150px;
         height: 150px;
-        margin: 40px 0 0 10px;
-        border-radius: 5px;
+        margin: 40px 0 0 0px;
+        border-radius: 10px;
     }
 
-    #source {
-        font-size: 10px;
-        margin-left: 10px;
-    }
 
 /* projects */
     #psection {
-        width: 1000px;
+        width: 900px;
         display:block;
         overflow:auto;
     }
 
     #project {
-        width: 630px;
+        width: 600px;
         float: left;
         margin: 10px 0 0 20px;
     }
 
-    #project ul {
-        list-style-position: inside;
-        margin-top:20px;
-        padding:0;
+    #project p {
+        font-size: 12px;
+        margin: 10px
     }
 
-    #project ul li{
-        margin: 5px 0;
-        height: 30px;
-        font-size: 12px;
-        font-weight: normal;
-    }
 
 /* academics */
     #asection {
-        width: 1000px;
+        width: 900px;
         display:block;
         overflow:auto;
     }
 
     #academic {
-        width: 630px;
+        width: 600px;
         float: left;
         margin: 10px 0 0 20px;
     }
@@ -192,6 +198,219 @@ a:visited {
         height: 10px;
         font-size: 12px;
         font-weight: normal;
+    }
+
+
+/* contact */
+/* general */
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0;
+    background-color: #cc0000;
+}
+
+a:link {
+    text-decoration: none;
+    color:blue;
+}
+
+a:visited {
+    text-decoration: none;
+    color:purple;
+}
+
+
+/* header */
+    header {
+        height: 70px;
+        background-color: #cc0000;
+    }
+
+
+/* navigation */
+    #nav ul {
+        list-style-type: none;
+        margin-top: 20px;
+        overflow: hidden;
+        background-color: #cc0000;
+    }
+
+    #nav li {
+        float: left;
+        border-top:1px solid #bbb;
+        border-bottom:1px solid #bbb;
+        border-right:1px solid #bbb;
+    }
+
+    #nav li:first-child {
+        border-left: 1px solid #bbb;
+    }
+
+    #nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #990000;
+    }
+
+    .active {
+        background-color: #000000;
+    }
+
+    #links {
+        width: 120px;
+        float: right;
+    }
+
+    #links img{
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+
+/* main content of a page */
+    #main {
+        background-color:#fff;
+        padding-top: 20px;
+    }
+
+
+/* home */
+    #intro {
+        background-color: #ffffff;
+        height: 500px;
+        width: 700px;
+        margin: 0px auto;
+        padding: 10px; /*right*/
+        color:#fff;
+    }
+
+    #intro p {
+        color: black;
+    }
+
+    /* photo */
+    #photo {
+        margin: 0px auto;
+        padding: 10px;
+        height: 280px;
+        width: 280px;
+    }
+
+    #photo img {
+        height: 250px;
+        width: 250px;
+        border-radius: 15px;
+    }
+
+
+/* section */
+.section {
+    margin: 0px auto;
+}
+
+
+/* experience */
+    #esection {
+        width: 900px;
+        height: 250px;
+    }
+
+    #experience {
+        width: 600px;
+        float: left;
+        margin: 10px 0 0 20px;
+    }
+
+    #experience ul {
+        list-style-position: inside;
+        margin-top:20px;
+        padding:0;
+    }
+
+    #experience ul li{
+        margin: 5px 0;
+        height: 40px;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    #jobtitle {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #company {
+        width: 200px;
+        float: right;
+    }
+
+    #company img{
+        width: 150px;
+        height: 150px;
+        margin: 40px 0 0 0px;
+        border-radius: 10px;
+    }
+
+
+/* projects */
+    #psection {
+        width: 900px;
+        display:block;
+        overflow:auto;
+    }
+
+    #project {
+        width: 600px;
+        float: left;
+        margin: 10px 0 0 20px;
+    }
+
+    #project p {
+        font-size: 12px;
+        margin: 10px
+    }
+
+
+/* academics */
+    #asection {
+        width: 900px;
+        display:block;
+        overflow:auto;
+    }
+
+    #academic {
+        width: 600px;
+        float: left;
+        margin: 10px 0 0 20px;
+    }
+
+    #academic ul {
+        list-style-position: inside;
+        margin-top:20px;
+        padding:0;
+    }
+
+    #academic ul li{
+        margin: 5px 0;
+        height: 10px;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+
+/* contact */
+    #csection {
+        width: 900px;
+        display:block;
+        overflow:auto;
+        margin: 10px 0 0 20px;
     }
 
 
